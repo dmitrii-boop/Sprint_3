@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
-import other.DetailsCourier;
+import utils.DetailsCourier;
 
 import java.io.File;
 
