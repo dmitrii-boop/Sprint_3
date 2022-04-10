@@ -39,6 +39,7 @@ public class CreateCourierTest {
     @DisplayName("Создание двух одинаковых курьеров")
     @Description("Метод должен вернуть 409 с телом {'code': 409, 'message': 'Этот логин уже используется. Попробуйте другой.'}")
     public void cannotCreateIdenticalCouriers(){
+        DetailsCourier.createNewCourier();
         File json = new File("src/test/resources/newCourier.json");
         Response response =
                 given()
