@@ -2,7 +2,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.junit.AfterClass;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import utils.DetailsCourier;
@@ -87,8 +87,8 @@ public class CreateCourierTest {
         System.out.println("Создание курьера без пароля: " + response.body().asString());
     }
 
-    @AfterClass
-    public static void cleanCourier(){
+    @After
+    public void cleanCourier(){
         DetailsCourier.deleteCourier();
     }
 }
