@@ -57,7 +57,7 @@ public class CreateCourierTest {
     @DisplayName("Создание курьера без логина")
     @Description("Метод должен вернуть 400 с телом {'code': 400, 'message': 'Недостаточно данных для создания учетной записи'}")
     public void createCourierWithOutLogin() {
-        File json = new File("src/test/resources/newCourierWithoutLogin.json");
+        File json = new File("src/test/resources/newCourierWithOutLogin.json");
         Response response =
                 given()
                         .header("Content-type", "application/json")
@@ -74,7 +74,7 @@ public class CreateCourierTest {
     @DisplayName("Создание курьера без пароля")
     @Description("Метод должен вернуть 400 с телом {'code': 400, 'message': 'Недостаточно данных для создания учетной записи'}")
     public void createCourierWithOutPassword() {
-        File json = new File("src/test/resources/newCourierWithoutPassword.json");
+        File json = new File("src/test/resources/newCourierWithOutPassword.json");
         Response response =
                 given()
                         .header("Content-type", "application/json")
